@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB9D7E76-78F7-4859-A3A7-B5556B60E07E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CompetenceInformationSystem</RootNamespace>
+    <AssemblyName>Специалист</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>system-help.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.98.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataGridManager.cs" />
+    <Compile Include="DataListManager.cs" />
+    <Compile Include="Discipline.cs" />
+    <Compile Include="FormAddCompetence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCompetence.Designer.cs">
+      <DependentUpon>FormAddCompetence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddCompetenceToDiscipline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCompetenceToDiscipline.Designer.cs">
+      <DependentUpon>FormAddCompetenceToDiscipline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddDiscipline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddDiscipline.Designer.cs">
+      <DependentUpon>FormAddDiscipline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddGroup.Designer.cs">
+      <DependentUpon>FormAddGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddSpec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddSpec.Designer.cs">
+      <DependentUpon>FormAddSpec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddSpecialization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddSpecialization.Designer.cs">
+      <DependentUpon>FormAddSpecialization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddStudent.Designer.cs">
+      <DependentUpon>FormAddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAssessmentCompetence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAssessmentCompetence.Designer.cs">
+      <DependentUpon>FormAssessmentCompetence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAssessmentUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAssessmentUser.Designer.cs">
+      <DependentUpon>FormAssessmentUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDiscipline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDiscipline.Designer.cs">
+      <DependentUpon>FormDiscipline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisciplineAndCompetence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisciplineAndCompetence.Designer.cs">
+      <DependentUpon>FormDisciplineAndCompetence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGroupAndStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGroupAndStudent.Designer.cs">
+      <DependentUpon>FormGroupAndStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoadCompetence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoadCompetence.Designer.cs">
+      <DependentUpon>FormLoadCompetence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoadDiscipline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoadDiscipline.Designer.cs">
+      <DependentUpon>FormLoadDiscipline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoadGroupAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoadGroupAssessment.Designer.cs">
+      <DependentUpon>FormLoadGroupAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoapWorkPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoapWorkPlan.Designer.cs">
+      <DependentUpon>FormLoapWorkPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSpecialty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSpecialty.Designer.cs">
+      <DependentUpon>FormSpecialty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStart.Designer.cs">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStudent.Designer.cs">
+      <DependentUpon>FormStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageCompetenceManager.cs" />
+    <Compile Include="PageGroupManager.cs" />
+    <Compile Include="PageWorkPlanManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingGroup.cs" />
+    <Compile Include="ReaderDiscipline.cs" />
+    <Compile Include="ReaderRating.cs" />
+    <Compile Include="ReaderWord.cs" />
+    <Compile Include="ReaderWordCompetence.cs" />
+    <Compile Include="ReaderWorkPlan.cs" />
+    <Compile Include="ReadExcel.cs" />
+    <Compile Include="SQLiteManager.cs" />
+    <Compile Include="SuperTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="FormAddCompetence.resx">
+      <DependentUpon>FormAddCompetence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddCompetenceToDiscipline.resx">
+      <DependentUpon>FormAddCompetenceToDiscipline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddDiscipline.resx">
+      <DependentUpon>FormAddDiscipline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddGroup.resx">
+      <DependentUpon>FormAddGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddSpec.resx">
+      <DependentUpon>FormAddSpec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddSpecialization.resx">
+      <DependentUpon>FormAddSpecialization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddStudent.resx">
+      <DependentUpon>FormAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAssessmentCompetence.resx">
+      <DependentUpon>FormAssessmentCompetence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAssessmentUser.resx">
+      <DependentUpon>FormAssessmentUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDiscipline.resx">
+      <DependentUpon>FormDiscipline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisciplineAndCompetence.resx">
+      <DependentUpon>FormDisciplineAndCompetence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGroupAndStudent.resx">
+      <DependentUpon>FormGroupAndStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoadCompetence.resx">
+      <DependentUpon>FormLoadCompetence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoadDiscipline.resx">
+      <DependentUpon>FormLoadDiscipline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoadGroupAssessment.resx">
+      <DependentUpon>FormLoadGroupAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoapWorkPlan.resx">
+      <DependentUpon>FormLoapWorkPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSpecialty.resx">
+      <DependentUpon>FormSpecialty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStart.resx">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStudent.resx">
+      <DependentUpon>FormStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="system-help.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
